@@ -1,0 +1,105 @@
+
+.footer-top{
+    height: 55px;
+    border-top: 1px solid #e1e1e1;
+    img{float: left;
+        height: 20px;
+        width: 85px;
+        padding: 18px 5px;
+    }
+    ul{
+        float: left;
+        margin:18px 80px;
+        li{
+            float: left;
+            padding-right:10px ;
+            margin-right: 8px;
+            background: url(../../img/bar_list1.gif) no-repeat right;
+            a{color: #777777;
+            font-size:13px ;}
+        }
+    }
+    .map{float: right;
+      color: #777777;
+      font-size:13px ;
+      margin:19px 20px;
+    }
+}
+.footer-center{  
+    height: 88px;
+    border-top:1px solid #e1e1e1 ;
+    color: #777777;
+    font-size:13px ;
+   
+}
+.footer-center-top{
+    height: 55px;
+     position: relative;
+         span{  
+            color: #777777;
+            width: 78px;
+            position: absolute;
+            left: 170px;
+            top:20px;
+            font-weight: bold;
+        }
+        ul{
+            position: absolute;
+            left:275px;
+            top: 20px;
+            height: 20px;
+            width: 575px;
+            li{ 
+                float: left;
+                 
+                a{color: #777777;
+                font-size:13px ;}
+            }
+        }
+    }
+.footer-center-bottom{
+    span{
+        font-size:13px ;
+        color: #777777;
+        font-weight: bold;
+        margin-left: 170px;
+    }
+    a{
+      color: #777777;
+      font-size:13px ; 
+      margin-left: 40px; 
+    }
+    
+}
+    
+.footer-bottom{
+    color: #777777;
+      font-size:12px ; 
+    height: 117px;
+    border-top:1px solid #e1e1e1 ;
+    .footer-bottom-top{
+        height: 52px;
+        img{
+         float: left;
+         width:127px ;
+         height: 13px;
+         padding: 20px 5px;
+         }
+        .address{float: left;
+                padding: 20px 30px;
+             }
+        
+    }
+    .icp{   
+          width: 170px;
+           height: 25px;
+           margin-left: 170px;
+           
+           a{
+             color: #777777;
+             font-size:12px ; 
+           }
+            }
+  }
+   
+        

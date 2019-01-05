@@ -1,0 +1,74 @@
+@import"./component/style.scss";
+@import"./component/header.scss";
+@import"./component/footer.scss";
+main{
+    width: 1100px;
+    margin: 0 auto;
+}
+.main-top{
+    height:54px;
+    background:url(../img/background.png) repeat-x  ;
+    
+}
+.main-header{    
+    height: 135px;   
+    border-bottom: 5px solid #555555;
+    overflow: hidden;
+    .location{
+        height: 20px;
+        width: 140px;
+        font-size: 13px;
+        color: #a9a9a9;
+        margin-top: 16px;
+        a{
+          color: #a9a9a9;
+        }
+    }
+    h3{
+        height: 80px;
+        text-align: center;
+        font-size: 29px;
+        color: #555555;
+        font-weight: normal;
+        background: url(../img/bg_pagetitarea.png) no-repeat center bottom;
+    }
+}
+form{
+    div{
+        height: 60px;
+        width:1100px ;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 14px;
+        color: #231f20;
+        label{
+        display: inline-block;
+        height: 60px;
+        width: 220px;
+        background: #f9f9f9;
+        vertical-align: top;
+        line-height: 60px;
+        text-indent: 1em;
+         }
+    input{
+        margin: 9px 15px;
+        width: 425px;
+        height: 38px;
+       
+        }
+    input[name="sex"]{
+        width: 18px;
+        height: 18px;
+        margin: 18px 15px;
+         }
+    input[type="checkbox"]{
+        width: 16px;
+        height: 16px;        
+        margin: 24px 15px;
+            }
+    #sub{
+        width: 140px;
+        margin-left:480px;
+    }        
+    }
+    
+}

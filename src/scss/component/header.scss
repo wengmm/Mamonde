@@ -1,0 +1,122 @@
+*{margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+}
+#head{
+    height: 140px;
+   
+}
+.head-top{
+    height: 20px;
+}
+#head .wrap{
+    height: 120px;
+   overflow: hidden;
+}
+.box1{height: 30px;
+       margin-top: 30px;
+       }
+.box1 ul{
+    float: right;
+}
+.box1 ul li{float: left;
+    margin-left: 15px;
+    }
+.box1 li a{
+    color:#767676;
+    font-size: 12px;
+}   
+h1{height:30px;
+    width: 166px;
+    float: left;
+    background: url(../img/logo.gif) no-repeat center;}
+.box2{
+    
+}    
+.box2 ._nav{float: left;}
+.box2 ._nav li{float: left;
+        font-weight: bolder;
+        padding:20px 15px;
+        
+        }
+.box2 .box2-right{float: right;
+                  
+                    }
+nav ._nav li:first-child a{
+    display: block;
+    height: 22px;
+    width: 80px;
+    margin-left: 2px;
+    background: #ffc628;
+    
+    img{        
+        padding:2px ;              
+    }
+    span{float: right;
+        margin: 2px;
+       
+    }
+}                    
+nav ._nav li a{color: black;
+        font-size: 13px;
+        
+        }
+.box2-right .txt{
+    width: 125px;
+    height: 22px;
+    border: none;
+   
+}        
+.box2-right .btn{
+    border: none;
+    height:22px ;
+    width: 60px;
+    background: url(../../img/btn_m_pdtsearch.png) no-repeat center;
+    background-size:21px 21px;
+    margin-top: 5px;
+}       
+#cars{
+    float: right;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    background: url(../../img/btn_m_cart.png) no-repeat center;
+    background-size: 21px;
+    margin-top: 5px;
+    }
+#cars span{display:block;
+            position: absolute;
+            right: 0;
+            width:15px;
+            height:15px;
+            border-radius:50%;
+            background:red;
+            text-align: center;
+            font-size: small;
+            line-height: 15px;
+            
+            }
+.bb,.product,.new{
+    position: absolute;
+    display: none;
+    top:142px;
+    li{
+        font-size: 12px;
+        a{
+            color: darkgrey;
+        }
+    }
+}
+.wrap .acbb{
+    display: block;
+    left:90px;
+}
+.wrap .acnew{
+    display: block;
+    left:180px;
+}
+.wrap .acproduct{
+    display: block;
+    left:260px;
+}

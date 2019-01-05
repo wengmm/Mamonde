@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/register.css"/>
+		<script type="text/javascript" src="../libs/require/require.js" data-main="/js/register.js">
+			
+		</script>
+		
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<div class="main-top"></div>
+			<div class="main-header">
+				<div class="location">
+					<a href="script:;">Home </a><span> >加入梦妆会员</span>
+				</div>
+				<h3>加入梦妆会员</h3>
+			</div>
+			<form method="post">
+				<div><label for="name">姓名</label><input id="name" type="text" placeholder="姓名"/> </div>
+				<div><label for="email">邮箱地址</label><input id="email" type="text" placeholder="邮箱"/> </div>
+				<div><label for="password">密码</label><input id="password" type="password" placeholder="密码由字母数字组成,至少八位"/> </div>
+				<div><label for="_password">确认密码</label><input id="_password" type="password" placeholder="请再次输入密码"/></div>
+				<div><label for="sex">性别</label>
+					&nbsp;&nbsp;男<input type="radio" name="sex" /> 
+					女<input type="radio" name="sex" checked="checked"/> 
+				</div>
+				<div><label for="test">12345</label><input type="text" id="test" placeholder="请输入左侧验证码，点击可刷新"/></div>
+				<div><input type="checkbox" />我已阅读并同意<a href="script:;">梦妆使用条款</a>和<a href="script:;">隐私政策</a>的全部内容</div>
+				
+				<div><input id="sub" type="submit" value="立即注册"/></div>
+			</form>
+			
+		</main>			
+		<footer></footer>
+	</body>
+</html>
