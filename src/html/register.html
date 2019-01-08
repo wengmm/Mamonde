@@ -11,8 +11,9 @@
 	</head>
 	<body>
 		<header></header>
+		<div class="bjimage"></div>
 		<main>
-			<div class="main-top"></div>
+			
 			<div class="main-header">
 				<div class="location">
 					<a href="script:;">Home </a><span> >加入梦妆会员</span>
@@ -20,16 +21,16 @@
 				<h3>加入梦妆会员</h3>
 			</div>
 			<form method="post">
-				<div><label for="name">姓名</label><input id="name" type="text" placeholder="姓名"/> </div>
-				<div><label for="email">邮箱地址</label><input id="email" type="text" placeholder="邮箱"/> </div>
-				<div><label for="password">密码</label><input id="password" type="password" placeholder="密码由字母数字组成,至少八位"/> </div>
-				<div><label for="_password">确认密码</label><input id="_password" type="password" placeholder="请再次输入密码"/></div>
+				<div><label for="name">用户名</label><input id="name" type="text" placeholder="用户名"/> <span>注：用户名不能包含特殊字符</span></div>
+				<div><label for="email">邮箱地址</label><input id="email" type="text" placeholder="邮箱"/> <span>注：请输入正确邮箱格式</span></div>
+				<div><label for="password">密码</label><input id="password" type="password" placeholder="密码"/><span>注：密码由字母数字组成,至少八位</span> </div>
+				<div><label for="_password">确认密码</label><input id="_password" type="password" placeholder="请再次输入密码"/><span>注：两次密码需相同</span></div>
 				<div><label for="sex">性别</label>
 					&nbsp;&nbsp;男<input type="radio" name="sex" /> 
 					女<input type="radio" name="sex" checked="checked"/> 
 				</div>
-				<div><label for="test">12345</label><input type="text" id="test" placeholder="请输入左侧验证码，点击可刷新"/></div>
-				<div><input type="checkbox" />我已阅读并同意<a href="script:;">梦妆使用条款</a>和<a href="script:;">隐私政策</a>的全部内容</div>
+				<div><label id="number" for="test">12345</label><input type="text" id="test" placeholder="请输入左侧验证码"/><span class="reload">刷新</span></div>
+				<div><input id="check" type="checkbox" checked="checked"/>我已阅读并同意<a href="script:;">梦妆使用条款</a>和<a href="script:;">隐私政策</a>的全部内容</div>
 				
 				<div><input id="sub" type="submit" value="立即注册"/></div>
 			</form>

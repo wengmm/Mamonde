@@ -2,4 +2,119 @@
 @import"./component/header.scss";
 @import"./component/footer.scss";
 
-.banner{height: 300px;}
+#banner{
+    height: 505px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    ul{
+        height: 505px;               
+        position: absolute;
+        left: 0;
+        top: 0;
+        li{
+            float: left;
+           
+            img{
+                width: 1263px;
+                height: 505px;
+            }
+        }
+        li.ac{
+            z-index: 5;
+        }
+    }
+    
+    ol{
+        position: absolute;
+        right: 570px;
+        bottom: 20px;
+        z-index: 10;
+        li{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            float: left;
+            background: #d3d3d3;
+            margin-right: 10px;
+            cursor: pointer;
+            
+        }
+        li.ac{
+            background: #ffc628;
+        }
+    }
+    
+    }
+.film{
+    margin-top: 20px;
+}   
+
+
+.mrList{
+    height: 435px;
+    margin-top: 45px;
+    position: relative;
+    h2{
+        text-align: center;
+        font-size: 30px;
+        font-weight: normal;
+    }
+    #list-item{
+         ul{
+            display: flex; 
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between; 
+            height: 300px;
+            li{
+                height: 300px;
+                width: 200px;
+                text-align: center;
+                
+            }
+             }
+    }
+   
+    #Prv{
+        position: absolute;
+        width: 30px;
+        height: 50px;       
+        left: 0;
+        top: 165px;
+        background: url(../img/left.jpg) no-repeat;
+        z-index: 1;
+    }
+    #Next{
+        position: absolute;
+        width: 30px;
+        height: 50px;
+        right: 0;
+        top: 165px;
+        z-index: 1;
+        background: url(../img/right.jpg) no-repeat;
+        
+    }
+}
+
+.mainSection{
+    height: 612px;
+    .left{
+         float: left;
+       
+        img{
+            display: block;
+            margin-bottom: 10px;
+           width: 605px; 
+        }
+    }
+    .right{
+        float: right;
+        img{
+            width: 608px;
+        }
+        
+        
+    }
+    
+}

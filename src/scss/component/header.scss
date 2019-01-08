@@ -5,65 +5,123 @@ text-decoration: none;
 }
 #head{
     height: 140px;
-   
+    
 }
 .head-top{
     height: 20px;
 }
 #head .wrap{
     height: 120px;
-   overflow: hidden;
+    overflow: hidden;
+    
+    
+    
+  
+   
 }
 .box1{height: 30px;
        margin-top: 30px;
+       position: relative;
+       
+       p{
+        position: absolute;       
+        color:#767676;
+        font-size: 14px;
+        top: 5px;
+        a{
+          color:#767676;  
+        }
+           }
+       #serve{
+           right: 0;
+           padding-left: 8px;
+           border-left:1px solid #767676;
+       }   
+       #welcome{
+              right: 160px;             
+              display: none;
+              span{
+                  color: orange;
+              }
+             }
+       #exit{
+           right: 100px;
+           cursor:pointer;
+           display: none;
+       }      
        }
 .box1 ul{
     float: right;
-}
-.box1 ul li{float: left;
-    margin-left: 15px;
+    margin-right: 110px;
+    margin-top: 3px;
+    li{
+       float: left;
+       margin-left: 15px;
+       a{
+          color:#767676;
+          font-size: 14px;
+       }
     }
-.box1 li a{
-    color:#767676;
-    font-size: 12px;
-}   
+}
 h1{height:30px;
     width: 166px;
     float: left;
-    background: url(../img/logo.gif) no-repeat center;}
+    background: url(../img/logo.gif) no-repeat center;
+    a{
+        display: block;
+        height:30px;
+        width: 166px;
+    }}
 .box2{
+    height: 62px;
+   nav{
+       width: 850px;
+       float: left;
+   }
     
 }    
-.box2 ._nav{float: left;}
 .box2 ._nav li{float: left;
         font-weight: bolder;
         padding:20px 15px;
         
         }
 .box2 .box2-right{float: right;
-                  
+                  margin-right: 10px;
                     }
-nav ._nav li:first-child a{
-    display: block;
-    height: 22px;
-    width: 80px;
-    margin-left: 2px;
-    background: #ffc628;
-    
-    img{        
-        padding:2px ;              
-    }
-    span{float: right;
-        margin: 2px;
-       
-    }
+._nav li:nth-child(n+2){
+    a:hover{
+        border-bottom: 3px solid #f5c040;
 }                    
+}
+._nav li:first-child{
+    a:hover{
+        background: #fce76a;
+    }
+}
+nav {
+    height: 62px;
+    ._nav li:first-child a{
+            display: block;
+            height: 22px;
+            width: 80px;
+            margin-left: 2px;
+            background: #ffc628;
+            
+            img{        
+                padding:2px ;              
+            }
+            span{float: right;
+                margin: 2px;
+               
+            }
+    } 
+}                   
 nav ._nav li a{color: black;
         font-size: 13px;
         
         }
 .box2-right .txt{
-    width: 125px;
+    width: 135px;
     height: 22px;
     border: none;
    
@@ -84,20 +142,29 @@ nav ._nav li a{color: black;
     background: url(../../img/btn_m_cart.png) no-repeat center;
     background-size: 21px;
     margin-top: 5px;
-    }
-#cars span{display:block;
-            position: absolute;
-            right: 0;
-            width:15px;
-            height:15px;
-            border-radius:50%;
-            background:red;
-            text-align: center;
-            font-size: small;
-            line-height: 15px;
+    
+    span{
+        display:block;
+        position: absolute;
+        right: 0;
+        top:0;
+        width:15px;
+        height:15px;
+        border-radius:50%;
+        background:red;
+        text-align: center;
+        font-size: small;
+        line-height: 15px;
             
             }
-.bb,.product,.new{
+    a{
+       display:inline-block;
+       width: 30px;
+       height: 22px; 
+    }        
+    }
+
+.active,.product,.story,.garden{
     position: absolute;
     display: none;
     top:142px;
@@ -108,15 +175,121 @@ nav ._nav li a{color: black;
         }
     }
 }
-.wrap .acbb{
-    display: block;
-    left:90px;
+.wrap .product {
+    height: 400px;
+    width: 650px;
+    left:200px;  
+    border: 2px solid #ffc628;
+    .left{
+    float: left;
+    margin:20px 40px;
+    li:first-child{ 
+           
+        a{
+            display: block;
+            width: 120px;
+            height: 30px; 
+            background: #dddddd; 
+            color: #212121;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+        }
+    }
+    li:nth-child(2){
+        height: 30px;
+        font-size: 14px;
+        margin-top: 10px; 
+        a{
+            color: #282627;
+           
+        }
+    }
+    li:nth-child(n+3){
+        height: 30px;
+    }
+    }
+    .right{
+        float: left;
+        margin-top: 60px;
+        li:nth-child(1){
+        height: 30px;
+        font-size: 14px;      
+        a{
+            color: #282627;                
+        }
+         }
+        li:nth-child(n+2){
+                height: 30px;
+        }
+        li:last-child{
+            a{
+                color: #282627;
+                font-size: 14px;
+            }
+        }
+      }
+      img{
+          float: right;
+          border-left:1px solid #e4e4e4 ;
+      }
 }
-.wrap .acnew{
-    display: block;
-    left:180px;
+.wrap .active{
+    width:120px ;
+    height: 60px;
+    left:500px;
+    border: 2px solid #ffc628;
+    a{
+        display: block;
+        color: #282627;
+        font-size:14px ;
+        text-align: center;
+        margin: 18px 10px;       
+    }
+}
+.wrap .story{
+    width:120px ;
+    height: 150px;
+    left:580px;
+    border: 2px solid #ffc628;
+    ul{
+        margin: 20px 20px;
+        li{
+            height: 30px;
+            a{color:#282627 ;
+            font-size: 14px;}
+        }
+    }
+    
+}
+.wrap .garden{
+    width:140px ;
+    height: 80px;
+    left:650px;
+    border: 2px solid #ffc628;
+    ul{
+        margin: 10px 20px;
+        li{
+            height: 30px;
+            a{
+              color:#282627 ;
+              font-size: 14px;}
+            }
+        }
 }
 .wrap .acproduct{
+   display: block;
+      
+}
+.wrap .acactive{
     display: block;
-    left:260px;
+    
+}
+.wrap .acstory{
+    display: block;
+    
+}
+.wrap .acgarden{
+  display: block;  
+    
 }
