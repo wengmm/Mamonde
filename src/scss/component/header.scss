@@ -167,7 +167,9 @@ nav ._nav li a{color: black;
 .active,.product,.story,.garden{
     position: absolute;
     display: none;
-    top:142px;
+    top:138px;
+    background: white;
+    z-index: 2;
     li{
         font-size: 12px;
         a{

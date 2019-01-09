@@ -5,7 +5,11 @@ define(["jquery"],function(){
 		}
 		init(){
 			$("footer").load("/html/component/footer.html",function(){
-				
+				$(".weixin").hover(function(){
+					$(".erwm").show("slow")
+				},function(){
+					$(".erwm").hide("slow")
+				})
 			})
 		}
 		

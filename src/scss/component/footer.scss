@@ -74,9 +74,10 @@
     
 .footer-bottom{
     color: #777777;
-      font-size:12px ; 
+    font-size:12px ; 
     height: 117px;
     border-top:1px solid #e1e1e1 ;
+    position: relative;
     .footer-bottom-top{
         height: 52px;
         img{
@@ -99,7 +100,36 @@
              color: #777777;
              font-size:12px ; 
            }
-            }
+        }
+    span{
+        display: inline-block;
+        position: absolute;
+        top: 70px;
+        width: 26px;
+        height: 26px;
+    } 
+    .weibo{
+        background:url(../../img/foot_sns1.gif) no-repeat  ;
+        right: 80px;
+        }
+    .weixin{
+        background:url(../../img/foot_sns2.gif) no-repeat ;
+        right: 45px;
+    }
+    .youku{
+        background:url(../../img/foot_sns3.gif) no-repeat ;
+        right: 10px;
+    }
+    .erwm{
+        width: 200px;
+        height: 200px;
+        background: url(../../img/mamondeqr.jpg) no-repeat ;
+        background-size:200px;
+        top:-130px;
+        right: 0px;
+        display: none;
+        }   
+            
   }
    
         

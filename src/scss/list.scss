@@ -49,30 +49,45 @@ main{
             line-height: 50px;
             text-align: center;
             width: 100px;
+            cursor: pointer;
           }
-        .ac{
+       li.ac{
             color: #303030;
         }
         
         
     }
     .container{
-        
-        #list-item{
+        position: relative;
+        height: 1200px;
+        .hufu{
+            position: absolute;
+            top: 0;           
+           
+        }
+        .caizhuang{
+            position: absolute;
+            top: 0;
+            display: none;
+           
+        }
+        #list-item,#list-items{
             
             ul{
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                
                 li{
                     width: 220px;
-                    height: 160px;
+                    height: 240px;
                     font-size: 14px;
                     text-align: center;
                 }
+               
             }
         }
+       
     }
     
     
