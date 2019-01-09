@@ -32,11 +32,13 @@
 			<div class="list">
 				<table cellspacing="0">
 				<thead>
-					<th><input type="checkbox" id="allcheck"/></th>
+					<th><input type="checkbox" id="allcheck"/>全选</th>
 					<th>商品</th>
+					<th>名称</th>
 					<th>金额</th>	
 					<th>数量</th>									
 					<th>结算金额</th>
+					<th>编辑</th>
 				</thead>
 				<tbody>
 				
@@ -44,9 +46,9 @@
 				<tfoot>
 					<tr>
 						<td><a href="script:;">删除所选商品</a></td>
-						<td colspan="4"><a href="script:;">删除全部商品</a></td>
+						<td colspan="6"><a href="script:;">删除全部商品</a></td>
 					</tr>
-					<tr><td colspan="5" align=right>最终结算金额 <span>1</span> 元</td></tr>
+					<tr><td colspan="7" align=right>最终结算金额 <span id="sum">0</span> 元</td></tr>
 				</tfoot>
 				
 			</table>

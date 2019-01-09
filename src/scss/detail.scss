@@ -9,6 +9,7 @@
 main{
     width: 1100px;
     margin: 0 auto;
+   
 
 .main-top{
     height:54px;
@@ -42,6 +43,7 @@ main{
 .main-center{
     height:500px;
     margin-top: 40px;
+    background: url(../img/bg_newsvisual_flowerl.png) no-repeat 990px top;
     .center-left{
         float: left;
         width: 200px;
@@ -69,7 +71,8 @@ main{
     .center-right{
         float: right;
         width: 460px;
-       
+        height: 360px;
+        background: url(../img/bg_newsvisual_flowerr.png) no-repeat -37px 280px;
         #product-name{
             height: 90px;
             line-height: 90px;
@@ -97,6 +100,7 @@ main{
         #addcar{
             background:black ;
             color: white;
+           
         }
         #account{
             background:#fec627 ;

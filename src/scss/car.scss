@@ -92,11 +92,25 @@
             
         }
         th:nth-child(2){
-            width: 470px;
+            width: 100px;
         }
         tbody{
-            height: 50px;
+            td{
+                text-align: center;
+            }
+            input{
+                width: 30px;
+            }
+            .qd,.qx,.number{
+                display: none;
+            }
+            .edit span{display: none;}
+            .edit input{display: inline-block;}
+            .edit .bj,.edit .sc{ display:none}
+            .edit .qd,.edit .qx{ display:inline}
+            
         }
+        
         tfoot{
             background: #f9f9f9;
             tr{

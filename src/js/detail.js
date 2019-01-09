@@ -1,5 +1,5 @@
 require(["./requirejs.config"],function(){
-	require(["jquery","url","header","footer"],function($,url){
+	require(["jquery","url","header","footer","cookie"],function($,url){
 		//item.init(url.baseUrlRap+"/alllist");
 		//console.log(url);
 		$(function(){
@@ -7,6 +7,7 @@ require(["./requirejs.config"],function(){
 			let arrSearch = location.search.slice(1).split("=");
 		    let searchObj = {};
 		   	searchObj[arrSearch[0]] = arrSearch[1];
+		   	console.log(searchObj.id);
 			$.ajax(
 				{
 					url:url.baseUrlRap+"/detail",
@@ -14,9 +15,9 @@ require(["./requirejs.config"],function(){
 					data:searchObj,
 					dataType:"json",
 			        success: function(res){
-			          console.log(res);
+			          
 			          $(".main-header h3,#product-name").text(res.res_body.title);
-			          console.log($(".center-left .first"));
+			        //  console.log($(".center-left .first"));
 			          $(".center-left .first").attr({src:res.res_body.img});
 			          $(".center-left .second").attr("src",res.res_body.imglist);
 			          $("#bigimg").attr("src",res.res_body.img);
@@ -34,7 +35,46 @@ require(["./requirejs.config"],function(){
 			        }
 			        
 			        }
-				)						
+				)
+			//加购物车
+			$("#addcar").on("click",function(){				
+				//console.log($("#product-name").text());
+				console.log($(".first").attr("src"));//取到的是jQuery对象，要转原生对象
+				var obj={
+					id:searchObj.id,
+					name:$("#product-name").text(),
+					price:$("#product-price span").text(),
+					img:$(".first").attr("src"),
+					num:1					
+				};
+				if($.cookie("cart")){
+					var arr=JSON.parse($.cookie("cart"));
+				}else{
+					var arr=[];
+				}
+				var flag=true;
+				for(var i=0;i<arr.length;i++){
+					if(arr[i].id===obj.id){ 		
+						arr[i].num++;
+						flag=false;
+					}
+				}
+				if(flag){
+					arr.push(obj);
+				}
+				$.cookie("cart",JSON.stringify(arr),{path:"/"});
+				console.log($.cookie("cart"))
+				
+				
+				
+			})
+			
+			
+			
+		//购物车	
+			
+			
+			
 		})
 		
 	}
