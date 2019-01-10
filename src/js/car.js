@@ -19,7 +19,7 @@ require(["./requirejs.config"],function(){
 						'<td><p class="je"></p></td>'+
 						
 						'<td>'+
-							'<a href="javascrip:;" class="bj">编辑</a>'+
+							'<a href="javascrip:;" class="bj">修改</a>'+
 							'<a href="javascrip:;" class="qd">确定</a>'+
 							'<a href="javascrip:;" class="qx">取消</a>'+
 							'<a href="javascrip:;" class="sc">删除</a>'+
@@ -61,6 +61,9 @@ require(["./requirejs.config"],function(){
 					let $tr=$(this).parent().parent();
 					$tr.find("span").text($tr.find(".number").val());
 					$tr.removeClass("edit");
+					if($tr.find("span").text()==0){
+						$tr.remove();
+					}
 					fun();
 					_sum();
 					bjCok();
@@ -76,13 +79,40 @@ require(["./requirejs.config"],function(){
 					let m=$tr.index();  //找到下标删除对应arr值再存cookie
 					//	console.log(m);
 					if(confirm("确定删除吗")){
-						$tr.remove();
+						$tr.remove();   //删除自己
 						arr.splice(m,1);
 						$.cookie("cart",JSON.stringify(arr),{path:"/"});
-					}	
+						//console.log(arr);
+						//console.log(arr[0]);
+					if(!arr[0]){
+						alert("购物车没任何商品了哦！")
+						let str1='<tr><td colspan="6">购物车空空如也~</td></tr>';
+						$("tbody").html(str1)
+							}
+						
+						}	
+					
 					_sum();
 					
 				});
+				$("#single").on("click",function(){
+					for(let m=0;m<$(".check").length;m++){
+						if($(".check").eq(m).prop("checked")){
+							$("tbody tr").eq(m).remove();
+							arr.splice(m,1);
+							$.cookie("cart",JSON.stringify(arr),{path:"/"});
+						}
+						
+					}
+					_sum();
+				});
+				$("#all").on("click",function(){
+					arr=[];
+					$.cookie("cart",JSON.stringify(arr),{path:"/"});
+					let str2='<tr><td colspan="6">购物车空空如也~</td></tr>';
+					$("tbody").html(str2);
+					_sum();
+				})
 				$("#allcheck").on("click",function(){
 					$(".check").prop("checked",true);//注意Pro与attr（一次）的区别
 					//count=target.checked? check.length:0;

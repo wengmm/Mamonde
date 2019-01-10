@@ -48,6 +48,7 @@
     }
 .film{
     margin-top: 20px;
+    img{width: 49%;}
 }   
 
 
@@ -61,15 +62,20 @@
         font-weight: normal;
     }
     #list-item{
+        margin-top: 50px;
+        overflow: hidden;
+ //       position: relative;
          ul{
             display: flex; 
             flex-direction: row;
             flex-wrap: nowrap;
-            justify-content: space-between; 
+            position: absolute;
+            left: 0px;
             height: 300px;
             li{
                 height: 300px;
-                width: 200px;
+                width: 250px;
+                padding-left: 50px;
                 text-align: center;
                 
             }

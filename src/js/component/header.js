@@ -21,6 +21,7 @@ define(["jquery","cookie"],function(){ //需要依赖jQuery
 				//console.log($(".pro"));
 				_this.enter();
 				_this.scroll();
+				_this.click();
 
 			});
 			
@@ -88,6 +89,15 @@ define(["jquery","cookie"],function(){ //需要依赖jQuery
 				//alert(2);
 				
 			})
+		};
+		
+		click(){
+			$(".btn").on("click",function(){
+				location.href="/html/list.html"
+				
+			})
+			
+			
 		}
 		
 		

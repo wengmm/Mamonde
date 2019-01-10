@@ -52,17 +52,34 @@ require(["./requirejs.config"],function(){
 			
 					btns[index].addClass("ac");
 					$imgs.eq(index).addClass("ac");
-				})
+				});
 			
+				
 				$("#banner").hover(function(){
 					clearInterval(timer);
 				}, (function autoPlay(){
 					timer = setInterval(() => {						
 						$("#next").trigger("click");
-					},4000);
+					},3000);
 					return autoPlay;
 					
 				})());
+				
+				$("#Next").on("click",function(){
+					//根据ul的length判断极值
+					/*parseInt($("#list-item ul").css("left"))===300?
+					$("#list-item ul").css("left","-300px");*/
+					$("#list-item ul").css("left","-300px");
+					
+				});
+				
+				$("#Prv").on("click",function(){
+					/*parseInt($("#list-item ul").css("left"))==0?
+					$("#list-item ul").css("left","0"):*/
+					$("#list-item ul").css("left","0");
+					
+					
+				})
 			
 
 

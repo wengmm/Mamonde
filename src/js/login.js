@@ -23,6 +23,8 @@ require(["./requirejs.config"],function(){
 						alert("登录成功，马上去首页");
 						
 						location.href = "/index.html";
+					}else{
+						alert("用户名或密码错误")
 					}
 					},
 					dataType:"json"
