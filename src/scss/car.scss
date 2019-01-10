@@ -79,6 +79,7 @@
     table{
          border-top: 1px solid #d6d6d6;
          border-bottom: 1px solid #d6d6d6;
+         width: 1100px;
          thead{
             background: #f9f9f9;
            
@@ -97,7 +98,10 @@
         tbody{
             td{
                 text-align: center;
+                height: 80px;
+                border-bottom:1px solid #d6d6d6 ;
             }
+            
             input{
                 width: 30px;
             }
@@ -146,33 +150,29 @@
     width: 1100px;
     margin: 0 auto; 
     .btn-chose-contain{
-        width:520px ;
+        width:350px ;
         height: 40px;
-        margin: 50px 280px;
+        margin: 50px 350px;
     }  
     a{
         display:inline-block;
         height: 40px;
         width: 168px;
-        color: #231f20;
+        color: white;
         font-size: 14px;
         text-align: center;
         line-height: 40px;
         
     } 
     a:first-child{
-        background: #f0f0f0;
+        background: #000000;
         margin-right: 5px;
     }
     a:nth-child(2){
-        background: #000000;
-        color: white;
-        margin-right: 5px;
+        background: #ffc628;        
+       
     }
-    a:nth-child(3){
-        background: #ffc628;
-    }
-    
+   
 }
 .main-bottom{
     width: 1100px;
