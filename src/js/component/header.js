@@ -20,6 +20,7 @@ define(["jquery","cookie"],function(){ //需要依赖jQuery
 				}
 				//console.log($(".pro"));
 				_this.enter();
+				_this.scroll();
 
 			});
 			
@@ -68,13 +69,26 @@ define(["jquery","cookie"],function(){ //需要依赖jQuery
 				$(".garden").addClass("acgarden")
 			},function(){
 				$(".garden").removeClass("acgarden")
-			})
+			});
 			$(".gar").mouseleave(function(){
 				$(".garden").removeClass("acgarden")
-			});
+			})
+		};
+		
+		scroll(){
+			//足够高有滚动条才具备scroll事件，页面中的滚动条属于window的
+			$(window).scroll(function(){  
+				//滚动条滚到一定高度 头部wrap定位
+				if($(window).scrollTop()>20){
+					$(".wrap").addClass("move")
+					
+				}else{
+					$(".wrap").removeClass("move")
+				}
+				//alert(2);
+				
+			})
 		}
-		
-		
 		
 		
 		

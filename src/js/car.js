@@ -126,6 +126,7 @@ require(["./requirejs.config"],function(){
 					}					
 					$.cookie("aCar",JSON.stringify(newArr),{path:"/"});
 					console.log($.cookie("aCar"));
+				//	location.href="/html/pay.html";
 				})
 				
 				

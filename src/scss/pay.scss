@@ -116,9 +116,47 @@ main{
        
     }
  }
+    
+    .information{
+        margin-top:20px ;
+        
+        h3{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        table{
+            margin: 0 auto;
+            td{
+                height: 50px;
+                width: 600px;
+                border-bottom:1px solid  white ;
+                
+                input{
+                    background:#f9f9f9 ;
+                    width: 600px;
+                    height: 50px;
+                    border: none;
+                }
+            }
+            tr{
+                td:first-child{
+                    background: #ffc628;
+                    width: 150px;
+                    text-align: center;
+                    font-size: 14px;
+                    font-style: italic;
+                    color: white;
+                    font-family:"agency fb";
+                }
+            }
+        }
+        
+    }
+ 
    .btn-chose{
     width: 1100px;
-    margin: 0 auto; 
+    margin: 0 auto;
+    
     .btn-chose-contain{
         width:520px ;
         height: 40px;
@@ -150,9 +188,9 @@ main{
  }
    .main-bottom{
         width: 1100px;
-        margin: 20px auto;
+        margin-bottom: 20px;
         border: 1px solid #d6d6d6;
-        
+        margin-top: 150px; 
         img{
             width: 1100px;
             
