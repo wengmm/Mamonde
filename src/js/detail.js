@@ -7,7 +7,7 @@ require(["./requirejs.config"],function(){
 			let arrSearch = location.search.slice(1).split("=");
 		    let searchObj = {};
 		   	searchObj[arrSearch[0]] = arrSearch[1];
-		   	console.log(searchObj.id);
+		 //	console.log(searchObj.id);
 			$.ajax(
 				{
 					url:url.baseUrlRap+"/detail",
@@ -39,7 +39,7 @@ require(["./requirejs.config"],function(){
 			//加购物车
 			$("#addcar").on("click",function(){				
 				//console.log($("#product-name").text());
-				console.log($(".first").attr("src"));//取到的是jQuery对象，要转原生对象
+			//	console.log($(".first").attr("src"));//取到的是jQuery对象，要转原生对象
 				var obj={
 					id:searchObj.id,
 					name:$("#product-name").text(),
@@ -63,6 +63,7 @@ require(["./requirejs.config"],function(){
 					arr.push(obj);
 				}
 				$.cookie("cart",JSON.stringify(arr),{path:"/"});
+				$("#cars span").text(arr.length);
 				console.log($.cookie("cart"))
 				
 				

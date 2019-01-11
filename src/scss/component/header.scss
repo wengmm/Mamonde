@@ -152,12 +152,13 @@ nav ._nav li a{color: black;
     span{
         display:block;
         position: absolute;
-        right: 0;
-        top:0;
+        right: -2px;
+        top:-5px;
         width:15px;
         height:15px;
+        color: white;
         border-radius:50%;
-        background:red;
+        background:orangered;
         text-align: center;
         font-size: small;
         line-height: 15px;

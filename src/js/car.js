@@ -78,12 +78,13 @@ require(["./requirejs.config"],function(){
 					let $tr=$(this).parent().parent();
 					let m=$tr.index();  //找到下标删除对应arr值再存cookie
 					//	console.log(m);
-					if(confirm("确定删除吗")){
+					if(confirm("真的要抛弃我吗？")){
 						$tr.remove();   //删除自己
 						arr.splice(m,1);
 						$.cookie("cart",JSON.stringify(arr),{path:"/"});
 						//console.log(arr);
 						//console.log(arr[0]);
+						$("#cars span").text(arr.length);
 					if(!arr[0]){
 						alert("购物车没任何商品了哦！")
 						let str1='<tr><td colspan="6">购物车空空如也~</td></tr>';
@@ -95,24 +96,7 @@ require(["./requirejs.config"],function(){
 					_sum();
 					
 				});
-				$("#single").on("click",function(){
-					for(let m=0;m<$(".check").length;m++){
-						if($(".check").eq(m).prop("checked")){
-							$("tbody tr").eq(m).remove();
-							arr.splice(m,1);
-							$.cookie("cart",JSON.stringify(arr),{path:"/"});
-						}
-						
-					}
-					_sum();
-				});
-				$("#all").on("click",function(){
-					arr=[];
-					$.cookie("cart",JSON.stringify(arr),{path:"/"});
-					let str2='<tr><td colspan="6">购物车空空如也~</td></tr>';
-					$("tbody").html(str2);
-					_sum();
-				})
+				
 				$("#allcheck").on("click",function(){
 					$(".check").prop("checked",true);//注意Pro与attr（一次）的区别
 					//count=target.checked? check.length:0;
@@ -127,6 +111,29 @@ require(["./requirejs.config"],function(){
 					_sum();
 					
 				});
+				$("#single").on("click",function(){
+					for(let m=0;m<arr.length;m++){
+						//index自动去找所选元素相对于其父级元素的位置
+						//console.log($(".check:checked").parent().parent().index())
+						//上面这个方法index只会返回找到的第一个值的下标
+						if($(".check").eq(m).prop("checked")){
+							$("tbody tr").eq(m).remove();
+							arr.splice(m,1);
+							$.cookie("cart",JSON.stringify(arr),{path:"/"});
+							m--;//下标回退 重新去找 没这个的话只能删掉一个
+						}						
+					}
+					$("#cars span").text(arr.length);
+					_sum();
+				});
+				$("#all").on("click",function(){
+					arr=[];
+					$.cookie("cart",JSON.stringify(arr),{path:"/"});
+					let str2='<tr><td colspan="6">购物车空空如也~</td></tr>';
+					$("tbody").html(str2);
+					$("#cars span").text(arr.length);
+					_sum();
+				})
 				
 				function _sum(){//下面总的全部结算金额
 					var sum=0;

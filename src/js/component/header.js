@@ -9,6 +9,7 @@ define(["jquery","cookie"],function(){ //需要依赖jQuery
 			$("header").load("/html/component/header.html",function(){//首先加载header  load方法加载模块
 				//console.log($.cookie("username"));
 				if($.cookie("username")){
+					//alert(2)
 					$("#welcome").css("display","block").children().text(JSON.parse($.cookie("username")));
 					$("#exit").css("display","block");
 					$("#exit").on("click",function(){
@@ -17,6 +18,14 @@ define(["jquery","cookie"],function(){ //需要依赖jQuery
 					})
 					$("#register_login").css("display","none");
 					
+				};
+				
+				if($.cookie("cart")){	//根据cookie数量显示购物车数量				
+					let _arr=JSON.parse($.cookie("cart"));					
+					$("#cars span").text(_arr.length);					
+					
+				}else{
+					$("#cars span").text(0);
 				}
 				//console.log($(".pro"));
 				_this.enter();
