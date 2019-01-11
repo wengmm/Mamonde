@@ -101,6 +101,31 @@ define(["jquery","cookie"],function(){ //需要依赖jQuery
 		};
 		
 		click(){
+			
+			/*$(".txt").focus(function(){
+			//e.preventDefault();
+			//把form表单里面有name属性的表单元素值序列化
+			var str = $(".box2-right form").serialize()			
+			$.getJSON("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?cb=?&"+str,function(res){
+				var data = res.s;
+				$(".box2-right ul").empty().show();
+				data.forEach((item, i) => {
+					$("<li>").html(item).appendTo($(".box2-right ul"));
+				})
+			})
+
+			$(".box2-right ul").on("click", ".box2-right li", function(){
+				$(".txt").val($(this).text());
+				$(".box2-right ul").hide();
+			})
+
+		})
+			$(".txt").blur(function(){
+				$(".box2-right ul").css("display","none");
+				
+			}*/
+			
+			
 			$(".btn").on("click",function(){
 				location.href="/html/list.html"
 				

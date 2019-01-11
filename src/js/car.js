@@ -160,7 +160,13 @@ require(["./requirejs.config"],function(){
 						if($(".check").eq(p).prop("checked")){
 							newArr.push(arr[p]);							
 						}						
-					}					
+					}
+					if(!newArr[0]){
+						alert("还没有选东西哦")
+					}else{
+						location.href="/html/pay.html";
+						//alert("qujiesuan")
+					}
 					$.cookie("aCar",JSON.stringify(newArr),{path:"/"});
 					console.log($.cookie("aCar"));
 				//	location.href="/html/pay.html";

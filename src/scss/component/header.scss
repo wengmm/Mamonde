@@ -92,6 +92,20 @@ h1{height:30px;
         }
 .box2 .box2-right{float: right;
                   margin-right: 10px;
+                  position: relative;
+                  form{
+                     
+                     float: left;
+                  }
+//                ul{
+//                    position: absolute;
+//                    background: #E5E5E5;
+//                    overflow: auto;
+//                    top: 30px;
+//                    height: 80px;
+//                    width: 120px;
+//                    display: none;
+//                }
                     }
 ._nav li:nth-child(n+2){
     a:hover{
@@ -142,6 +156,7 @@ nav ._nav li a{color: black;
 }       
 #cars{
     float: right;
+   // display: inline-block;
     position: relative;
     width: 30px;
     height: 22px;
